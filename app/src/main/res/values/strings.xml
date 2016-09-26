@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android_Job1</string>
+
+    <string name="tvAccount"><b>Account</b></string>
+
+
+    <string name="tvKeepDay"></string>
+
 </resources>

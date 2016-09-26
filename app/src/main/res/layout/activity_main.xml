@@ -10,16 +10,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android_job1.MainActivity">
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lvACCOUNT"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvAccount"
+        android:text="@string/tvAccount" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lvSETTING" />
+        android:id="@+id/lvACCOUNT"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvAccount"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="280dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/tvKeepDay"
+        android:id="@+id/tvKeepDay"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>
