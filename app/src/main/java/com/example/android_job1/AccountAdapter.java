@@ -1,7 +1,6 @@
 package com.example.android_job1;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ public class AccountAdapter extends BaseAdapter{
         private List<AccountItem> mList;
         private Context mContext;
 
-
         public int getCount(){
             return mList.size();
         }
@@ -29,7 +27,7 @@ public class AccountAdapter extends BaseAdapter{
             //textview.setText(accountitem.getText());
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = inflater.inflate(R.layout.list_item,parent,false);
-            TextView textview = (TextView) row.findViewById(R.id.title);
+            TextView textview = (TextView) row.findViewById(R.id.titleCheck);
             TextView subtextview = (TextView) row.findViewById(R.id.text);
             textview.setText(accountitem.getTitle());
             subtextview.setText(accountitem.getText());
@@ -41,7 +39,6 @@ public class AccountAdapter extends BaseAdapter{
         public AccountItem getItem(int position){
             return mList.get(position);
         }
-
         public AccountAdapter (List<AccountItem> list, Context context){
             mList = list;
             mContext = context;

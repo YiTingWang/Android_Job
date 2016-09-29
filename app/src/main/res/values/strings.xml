@@ -4,6 +4,12 @@
     <string name="tvAccount"><b>Account</b></string>
 
 
-    <string name="tvKeepDay"></string>
+    <string name="tvCheck"></string>
+    <string name="tvChecks">Only WiFi</string>
+
+    <string name="checkbox"></string>
+    <string name="checkboxs"></string>
+
+    <string name="tvKeepDay">Keep Day</string>
 
 </resources>
