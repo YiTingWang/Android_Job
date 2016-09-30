@@ -4,12 +4,14 @@
     <string name="tvAccount"><b>Account</b></string>
 
 
-    <string name="tvCheck"></string>
+    <string name="tvCheck"><b>Camera\n</b>Current Status : Open</string>
     <string name="tvChecks">Only WiFi</string>
 
     <string name="checkbox"></string>
     <string name="checkboxs"></string>
 
-    <string name="tvKeepDay">Keep Day</string>
+    <string name="tvKeepDay"><b>Keep Day</b></string>
+    <string name="tvErase"><b>Erase</b></string>
+    <string name="tvSignOut"><b>Sign out</b></string>
 
 </resources>

@@ -17,7 +17,7 @@ public class AlertDialogRadio extends DialogFragment {
 
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Keep Day").setSingleChoiceItems(items, -1, new OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

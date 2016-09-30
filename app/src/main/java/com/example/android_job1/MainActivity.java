@@ -1,5 +1,6 @@
 package com.example.android_job1;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
@@ -37,13 +38,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextViews;
 
     private TextView mTextViewKeepDay;
+    private TextView mTextViewErase;
+    private TextView mTextViewSignOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //ListView
+        /******************************ListView******************************/
         ListView lvACCOUNT = (ListView)findViewById(R.id.lvACCOUNT);
         List<AccountItem> list = new ArrayList<>();
 
@@ -55,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
         lvACCOUNT.setAdapter(new AccountAdapter(list,this));
 
 
-        //CheckBox
+        /******************************CheckBox******************************/
         mCheckBox = (CheckBox) findViewById(R.id.checkbox);
         mCheckBoxs = (CheckBox) findViewById(R.id.checkboxs);
 
         mTextView = (TextView) findViewById(R.id.tvCheck);
-        mTextView.setText("Camera\n"+"Current Status : Open");
+        //mTextView.setText("Camera\n"+"Current Status : Open");
 
         mTextViews = (TextView) findViewById(R.id.tvChecks);
         mTextViews.setVisibility(View.GONE);
@@ -83,11 +86,11 @@ public class MainActivity extends AppCompatActivity {
         mCheckBox.setOnClickListener(checkBoxListener);
 
 
-        //AlertDialog
+        /******************************AlertDialog with radiobutton******************************/
         mTextViewKeepDay = (TextView) findViewById(R.id.tvKeepDay);
 
-//        mTextViewKeepDay.setClickable(true);
-//        mTextViewKeepDay.setFocusable(true);
+        //mTextViewKeepDay.setClickable(true);
+        //mTextViewKeepDay.setFocusable(true);
         OnClickListener textViewChecked = new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,12 +100,68 @@ public class MainActivity extends AppCompatActivity {
         };
         mTextViewKeepDay.setOnClickListener(textViewChecked);
 
-//        AlertDialogRadio myDialog = new AlertDialogRadio();
-//        myDialog.show(this.getFragmentManager(),"myDialog");
+        //AlertDialogRadio myDialog = new AlertDialogRadio();
+        //myDialog.show(this.getFragmentManager(),"myDialog");
 
 
-        //TextView checklayou = (TextView)findViewById(R.id.checklayout);
-        //checklayou.setAdapter(new CheckAdapter(titlecheck,this));
+        /******************************AlertDialog(Eraser)******************************/
+        mTextViewErase = (TextView)findViewById(R.id.tvErase);
+
+        OnClickListener textViewErase = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Erase");
+                builder.setMessage("Erase all offline file");
+                //builder.setCancelable(false);   //不能使用手機返回鑑離開AlertDialog
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.out.println("Erase_yes");
+                    }
+                });
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.out.println("Erase_no");
+                    }
+                });
+                AlertDialog erase = builder.create();
+                erase.show();
+            }
+        };
+        mTextViewErase.setOnClickListener(textViewErase);
+
+
+        /******************************AlertDialog(SignOut)******************************/
+        mTextViewSignOut = (TextView) findViewById(R.id.tvSignOut);
+
+        OnClickListener textViewSignOut = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Sign out");
+                builder.setMessage("Ready to logout?");
+                //builder.setCancelable(false);   //不能使用手機返回鑑離開AlertDialog
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.out.println("SignOut_yes");
+                    }
+                });
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.out.println("SignOut_no");
+                    }
+                });
+                AlertDialog signout = builder.create();
+                signout.show();
+            }
+        };
+        mTextViewSignOut.setOnClickListener(textViewSignOut);
+
 
     }
 }
+

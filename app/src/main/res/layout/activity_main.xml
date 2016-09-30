@@ -33,7 +33,11 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:longClickable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -86,6 +90,20 @@
             android:layout_height="wrap_content"
             android:text="@string/tvKeepDay"
             android:id="@+id/tvKeepDay"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tvErase"
+            android:id="@+id/tvErase"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tvSignOut"
+            android:id="@+id/tvSignOut"
             android:layout_weight="0.03" />
 
     </LinearLayout>
