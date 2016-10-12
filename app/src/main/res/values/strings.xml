@@ -1,17 +1,20 @@
 <resources>
     <string name="app_name">Android_Job1</string>
 
-    <string name="tvAccount"><b>Account</b></string>
+    <string name="tvAccount"><b>ACCOUNT</b></string>
+    <string name="tvSettingt"><b>SETTING</b></string>
 
-
-    <string name="tvCheck"><b>Camera\n</b>Current Status : Open</string>
-    <string name="tvChecks">Only WiFi</string>
+    <string name="tvCheck"><b>Camera Upload\n</b>Current Status :\n</string>
+    <string name="tvChecks">Only WiFi Upload</string>
 
     <string name="checkbox"></string>
     <string name="checkboxs"></string>
 
-    <string name="tvKeepDay"><b>Keep Day</b></string>
-    <string name="tvErase"><b>Erase</b></string>
+    <string name="tvKeepDay"><b>Keep Day\n</b>Default keep days</string>
+    <string name="tvErase"><b>Erase\n</b>Erase all offline file</string>
     <string name="tvSignOut"><b>Sign out</b></string>
+
+    <string name="tvUsed"><b>Used Disk Space</b></string>
+    <string name="tvLegal"><b>Legal and Privacy</b></string>
 
 </resources>

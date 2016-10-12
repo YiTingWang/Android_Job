@@ -18,4 +18,41 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/titleCheck" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkboxs"
+            android:id="@+id/checkbox"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:layout_gravity="right" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvChecks"
+                android:id="@+id/tvChecks"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkboxs"
+                android:id="@+id/checkboxs"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

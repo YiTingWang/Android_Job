@@ -12,8 +12,8 @@ import android.os.Bundle;
  */
 public class AlertDialogRadio extends DialogFragment {
 
-    final CharSequence[] items = {"5 Days","10 Days","20 Days","30 Days"};
-    String selection;
+    final String[] items = new String[] {"5 Days","10 Days","20 Days","30 Days"};
+    private String selection;
 
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
@@ -35,6 +35,7 @@ public class AlertDialogRadio extends DialogFragment {
                         selection = (String) items[which];
                         break;
                 }
+                //dismiss();
             }
         }).setNegativeButton("取消",null);
         return builder.create();

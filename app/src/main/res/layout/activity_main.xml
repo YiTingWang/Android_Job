@@ -10,34 +10,66 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android_job1.MainActivity">
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/tvAccount"
-        android:text="@string/tvAccount" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvAccount"
+            android:text="@string/tvAccount" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvACCOUNT"
+            android:layout_below="@+id/tvAccount"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="280dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible" />
+
+    </LinearLayout>
 
     <ListView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvACCOUNT"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tvAccount"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="280dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true" />
+        android:id="@+id/lvSETTING"
+        android:layout_marginTop="250dp"
+        android:transitionGroup="false"
+        android:visibility="gone" />
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:weightSum="1"
         android:longClickable="false"
+        android:id="@+id/linearLayout"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tvSettingt"
+            android:id="@+id/tvSetting" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -46,13 +78,11 @@
             android:id="@+id/checklayout"
             android:layout_alignTop="@+id/lvACCOUNT"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="193dp"
-            android:layout_weight="0.03">
+            android:layout_alignParentEnd="true">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/tvCheck"
                 android:id="@+id/tvCheck" />
@@ -69,8 +99,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checklayouts"
-            android:layout_weight="0.03">
+            android:id="@+id/checklayouts">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,28 +112,38 @@
                 android:layout_height="wrap_content"
                 android:text="@string/checkboxs"
                 android:id="@+id/checkboxs" />
+
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
+            android:text="@string/tvUsed"
+            android:id="@+id/tvUsed" />
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="50dp"
             android:text="@string/tvKeepDay"
-            android:id="@+id/tvKeepDay"
-            android:layout_weight="0.03" />
+            android:id="@+id/tvKeepDay" />
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
+            android:text="@string/tvLegal"
+            android:id="@+id/tvLegal" />
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="50dp"
             android:text="@string/tvErase"
-            android:id="@+id/tvErase"
-            android:layout_weight="0.03" />
+            android:id="@+id/tvErase" />
 
         <TextView
-            android:layout_width="61dp"
-            android:layout_height="wrap_content"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
             android:text="@string/tvSignOut"
-            android:id="@+id/tvSignOut"
-            android:layout_weight="0.03" />
+            android:id="@+id/tvSignOut" />
 
     </LinearLayout>
 
