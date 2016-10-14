@@ -41,6 +41,14 @@ public class AccountAdapter extends BaseAdapter{
             titleview.setVisibility(View.VISIBLE);
             if(accountitem.getShowCheckVisibility()) {
                 checkbox.setVisibility(View.VISIBLE);
+                if(accountitem.getCheck()){
+                    accountitem.setText(accountitem.getText().substring(0,16)+"Open");
+                    System.out.println(accountitem.getText());
+                }
+                else{
+                    accountitem.setText(accountitem.getText().substring(0,16)+"Close");
+                    System.out.println(accountitem.getText());
+                }
 //                View.OnClickListener checkBoxListener = new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {

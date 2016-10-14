@@ -17,7 +17,6 @@ public class CheckListener implements View.OnClickListener {
 
     private AccountItem mAccountItem;
     private AccountAdapter mAccountAdapter;
-    private String mSetText;
 
 
 //    public CheckListener (MainActivity activity, CheckBox checkbox,CheckBox checkBoxs,TextView textView,TextView textViews){
@@ -45,15 +44,12 @@ public class CheckListener implements View.OnClickListener {
         mAccountItem.setCheck(!mAccountItem.getCheck());
 
 //        if(mAccountItem.getCheck()){
-//            mSetText = mAccountItem.getText()+"Open";
-//            mAccountItem.setText(mSetText);
+//            mAccountItem.setText(mAccountItem.getText().substring(0,16)+"Open");
 //            System.out.println(mAccountItem.getText());
-//            System.out.println("1");
-//        }else{
-//            mSetText = mAccountItem.getText()+"Close";
-//            mAccountItem.setText(mSetText);
+//        }
+//        else{
+//            mAccountItem.setText(mAccountItem.getText().substring(0,16)+"Close");
 //            System.out.println(mAccountItem.getText());
-//            System.out.println("2");
 //        }
 
         System.out.println(mAccountItem.getCheck());

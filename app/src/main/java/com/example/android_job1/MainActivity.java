@@ -59,24 +59,27 @@ public class MainActivity extends AppCompatActivity {
         accountItem.setClickListener(checkListener);
         list.add(accountItem);
 
-        list.add(new AccountItem("Used Disk Space",15));
-
-        AccountItem accountItem1 = new AccountItem("Keep Day","Default keep days",15);
-        RadioListener radioListener = new RadioListener(MainActivity.this);
-        accountItem1.setClickListener(radioListener);
+        AccountItem accountItem1 = new AccountItem("Used Disk Space",15);
+        ChangeListener changeListener = new ChangeListener(MainActivity.this);
+        accountItem1.setClickListener(changeListener);
         list.add(accountItem1);
+
+        AccountItem accountItem2 = new AccountItem("Keep Day","Default keep days",15);
+        RadioListener radioListener = new RadioListener(MainActivity.this);
+        accountItem2.setClickListener(radioListener);
+        list.add(accountItem2);
 
         list.add(new AccountItem("Legal and Privacy",15));
 
-        AccountItem accountItem2 = new AccountItem("Erase","Erase all offline file",15);
+        AccountItem accountItem3 = new AccountItem("Erase","Erase all offline file",15);
         ConfirmListener confirmListener = new ConfirmListener(MainActivity.this,"Erase","Erase all offline file");
-        accountItem2.setClickListener(confirmListener);
-        list.add(accountItem2);
-
-        AccountItem accountItem3 = new AccountItem("Sign out",15);
-        ConfirmListener confirmListener1 = new ConfirmListener(MainActivity.this,"Sign out","Ready to logout?");
-        accountItem3.setClickListener(confirmListener1);
+        accountItem3.setClickListener(confirmListener);
         list.add(accountItem3);
+
+        AccountItem accountItem4 = new AccountItem("Sign out",15);
+        ConfirmListener confirmListener1 = new ConfirmListener(MainActivity.this,"Sign out","Ready to logout?");
+        accountItem4.setClickListener(confirmListener1);
+        list.add(accountItem4);
 
 
         lvACCOUNT.setAdapter(accountAdapter);

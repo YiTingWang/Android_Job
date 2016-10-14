@@ -9,7 +9,6 @@ public class AccountItem {
 
     private String mTitle;
     private String mText;
-    private String mSetText;
     private float mSize;
     private boolean mCheck;
     private boolean mShowText;
@@ -53,7 +52,7 @@ public class AccountItem {
     }
 
     public void setText(String text){
-        mSetText = text;
+        mText = text;
     }
 
     public float getSize(){
